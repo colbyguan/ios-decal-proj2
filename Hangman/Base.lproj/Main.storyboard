@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="R6h-HK-X60">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hangman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBP-73-slR">
+                                <rect key="frame" x="210" y="127" width="180" height="92"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="110" y="117" width="180" height="92"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flM-Ce-Qkl">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <string key="text">Build a stick figure!
+Don't get him killed!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="58" y="205" width="280" height="66"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2c-N4-hOA">
+                                <rect key="frame" x="244" y="279" width="113" height="42"/>
+                                <color key="backgroundColor" red="0.13457033367548363" green="0.68211410984848486" blue="0.43688579932073512" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.98697683010000004" green="0.97883439510000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="133" y="271" width="134" height="58"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="0J4-oE-HM0" kind="show" id="fFt-Mf-0ww"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H2c-N4-hOA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="48I-63-78R"/>
+                            <constraint firstItem="flM-Ce-Qkl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dq6-hb-4uZ"/>
+                            <constraint firstItem="H2c-N4-hOA" firstAttribute="top" secondItem="flM-Ce-Qkl" secondAttribute="bottom" constant="8" id="Ga3-gJ-o3a"/>
+                            <constraint firstItem="H2c-N4-hOA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cSV-sp-9zQ"/>
+                            <constraint firstItem="flM-Ce-Qkl" firstAttribute="top" secondItem="cBP-73-slR" secondAttribute="bottom" constant="-4" id="pwp-pl-UTN"/>
+                            <constraint firstItem="cBP-73-slR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tkW-g6-w7r"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="flM-Ce-Qkl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="tkW-g6-w7r"/>
+                                <exclude reference="Dq6-hb-4uZ"/>
+                                <exclude reference="pwp-pl-UTN"/>
+                                <exclude reference="48I-63-78R"/>
+                                <exclude reference="Ga3-gJ-o3a"/>
+                                <exclude reference="cSV-sp-9zQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="flM-Ce-Qkl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="tkW-g6-w7r"/>
+                                <include reference="Dq6-hb-4uZ"/>
+                                <include reference="pwp-pl-UTN"/>
+                                <include reference="48I-63-78R"/>
+                                <include reference="Ga3-gJ-o3a"/>
+                                <include reference="cSV-sp-9zQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="SkV-1S-stJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="462"/>
+        </scene>
+        <!--Guess View Controller-->
+        <scene sceneID="oP1-Dq-XdR">
+            <objects>
+                <viewController id="0J4-oE-HM0" customClass="GuessViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wF6-Pm-SBK"/>
+                        <viewControllerLayoutGuide type="bottom" id="sRc-MF-nAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I7w-OL-rQY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3e-nP-F5o">
+                                <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="332" width="400" height="216"/>
+                                </variation>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COO-E2-ajR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Guess this letter!"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="142" y="332" width="117" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="guessButtonPressed:" destination="0J4-oE-HM0" eventType="touchUpInside" id="f6r-xS-Dc5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TX-EC-YTJ">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="88" width="85" height="236"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akz-R3-fUT">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="303" width="400" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman1.gif" translatesAutoresizingMaskIntoConstraints="NO" id="3UH-9z-ama">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="113" y="88" width="201" height="172"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="akz-R3-fUT" firstAttribute="top" secondItem="7TX-EC-YTJ" secondAttribute="bottom" constant="-21" id="22a-52-x9e"/>
+                            <constraint firstItem="COO-E2-ajR" firstAttribute="centerX" secondItem="I7w-OL-rQY" secondAttribute="centerX" id="3KN-Nm-WTp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3UH-9z-ama" secondAttribute="trailing" constant="66" id="8Le-3c-D2F"/>
+                            <constraint firstItem="akz-R3-fUT" firstAttribute="centerY" secondItem="I7w-OL-rQY" secondAttribute="centerY" id="MN8-gc-kRk"/>
+                            <constraint firstItem="akz-R3-fUT" firstAttribute="centerX" secondItem="I7w-OL-rQY" secondAttribute="centerX" id="PNU-By-KLT"/>
+                            <constraint firstItem="i3e-nP-F5o" firstAttribute="centerX" secondItem="I7w-OL-rQY" secondAttribute="centerX" id="gfk-Ia-gBJ"/>
+                            <constraint firstItem="COO-E2-ajR" firstAttribute="top" secondItem="akz-R3-fUT" secondAttribute="bottom" constant="8" id="jR9-GB-N7h"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="7TX-EC-YTJ" secondAttribute="leading" id="jhF-aK-GpN"/>
+                            <constraint firstItem="akz-R3-fUT" firstAttribute="top" secondItem="3UH-9z-ama" secondAttribute="bottom" constant="43" id="tHX-uS-ga3"/>
+                            <constraint firstItem="i3e-nP-F5o" firstAttribute="top" secondItem="COO-E2-ajR" secondAttribute="bottom" constant="-30" id="xYj-FZ-eEe"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="i3e-nP-F5o"/>
+                                <exclude reference="COO-E2-ajR"/>
+                                <exclude reference="7TX-EC-YTJ"/>
+                                <exclude reference="akz-R3-fUT"/>
+                                <exclude reference="3UH-9z-ama"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="jhF-aK-GpN"/>
+                                <exclude reference="8Le-3c-D2F"/>
+                                <exclude reference="22a-52-x9e"/>
+                                <exclude reference="MN8-gc-kRk"/>
+                                <exclude reference="PNU-By-KLT"/>
+                                <exclude reference="tHX-uS-ga3"/>
+                                <exclude reference="gfk-Ia-gBJ"/>
+                                <exclude reference="xYj-FZ-eEe"/>
+                                <exclude reference="3KN-Nm-WTp"/>
+                                <exclude reference="jR9-GB-N7h"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="i3e-nP-F5o"/>
+                                <include reference="COO-E2-ajR"/>
+                                <include reference="7TX-EC-YTJ"/>
+                                <include reference="akz-R3-fUT"/>
+                                <include reference="3UH-9z-ama"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="jhF-aK-GpN"/>
+                                <include reference="8Le-3c-D2F"/>
+                                <include reference="22a-52-x9e"/>
+                                <include reference="MN8-gc-kRk"/>
+                                <include reference="PNU-By-KLT"/>
+                                <include reference="tHX-uS-ga3"/>
+                                <include reference="gfk-Ia-gBJ"/>
+                                <include reference="xYj-FZ-eEe"/>
+                                <include reference="3KN-Nm-WTp"/>
+                                <include reference="jR9-GB-N7h"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dOu-pF-IFH">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Fvt-5J-IXE">
+                            <connections>
+                                <action selector="backButtonPressed:" destination="0J4-oE-HM0" id="QnT-Xr-9Zb"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Start Over" id="gie-6o-idv">
+                            <connections>
+                                <action selector="startOverButtonPressed:" destination="0J4-oE-HM0" id="vDA-y4-8kM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="guessButton" destination="COO-E2-ajR" id="ec8-qB-Lwh"/>
+                        <outlet property="guessHistoryLabel" destination="7TX-EC-YTJ" id="pBy-kO-TEM"/>
+                        <outlet property="hangmanImage" destination="3UH-9z-ama" id="LUe-cH-9in"/>
+                        <outlet property="picker" destination="i3e-nP-F5o" id="H5d-h7-u1Y"/>
+                        <outlet property="startOverButton" destination="gie-6o-idv" id="Rdu-RN-Ckt"/>
+                        <outlet property="wordSoFar" destination="akz-R3-fUT" id="9co-Bf-xcS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeJ-3X-CgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2997" y="462"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ohJ-4W-PJu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R6h-HK-X60" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l2p-OY-fp5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="czt-RV-14l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wze-XR-cVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1398" y="462"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hangman1.gif" width="100" height="100"/>
+    </resources>
+</document>
